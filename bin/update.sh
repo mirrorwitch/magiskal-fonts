@@ -16,17 +16,17 @@ while read line; do
 done < "$basedir/$urllist"
 if ls *|grep '\.zip$'; then
     for zipfile in *.zip; do
-        unzip -o "$zipfile" && rm "$zipfile"
+        unzip -o "$zipfile" # && rm "$zipfile"
     done
 fi
 
 if ls *|grep -q -F '[wdth,wght].'; then
     for dirtyname in *wdth,wght*.tt[fc]; do
         cleanname="$(echo "$dirtyname" | sed -e "s/.wdth,wght.//")";
-        mv -v "$dirtyname" "$cleanname"
+        cp -v "$dirtyname" "$cleanname"
     done
 fi
 if ls *|grep -q '\.tt[fc]$'; then
-  mv -f -u -v *.tt[fc] "$fontsdir"
+  cp -f -u -v *.tt[fc] "$fontsdir"
 fi
 chmod 0644 "$fontsdir"/*
