@@ -11,7 +11,7 @@ set -e
 xmllint --noout "$fontsxml_old"
 xmllint --noout "$fontsxml_new"
 # :>
-for font in $( diff -u "$fontsxml_old" "$fontsxml_new" | sed -n -e 's,^+[^>]*>,,p' | sed -e 's,</.*,,' | sort -u | grep -v '^ *$' )
+for font in $( diff -u "$fontsxml_old" "$fontsxml_new" | sed -n -e 's,^+[^>]*>,,p' | sed -e 's,<.*,,' | sort -u | grep -v '^ *$' )
 do
     ls -lh "$fontsdir/$font"
 done

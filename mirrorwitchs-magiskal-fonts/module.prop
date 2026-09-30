@@ -1,6 +1,6 @@
 id=custom_noto_fonts
 name=Updated Noto Fonts, CJK, emoji+Monochrome emoji
-version=2026.09.29-15:19
-versionCode=202609291519
+version=2026.09.29-18:15
+versionCode=202609291815
 author=mirrorwitch
 description=Systemlessly updates Noto Emoji and Noto Sans for full Unicode support.
