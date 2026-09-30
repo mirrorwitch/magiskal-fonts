@@ -12,6 +12,7 @@ Features:
  - Noto Sans CJK, Noto Serif CJK changed for variable font with 7 different
    weights configured.
  - Updated releases of Noto Sans, Noto Serif, Noto CJK, Noto Color Emoji.
+ - Supports CJK up to Unicode 13, emoji up to Unicode 18.
 
 Bugs:
  - I cannot figure out a functional way to fallback to Noto Color Emoji when
