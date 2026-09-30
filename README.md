@@ -26,9 +26,10 @@ with the following differences:
 
 ## Build
  - Run `update.sh` to get latest version of fonts
- - Get manually downloaded fonts (see below) and put them on `mirrorwitch-magisckal-fonts/fonts`
- - Run `make-zip.sh` (or cd into `mirrorwitch-magisckal-fonts` and zip
-   everything)
+ - Get manually downloaded fonts (see below) and put them on 
+   `mirrorwitch-magisckal-fonts/system/fonts`
+ - Run `make-zip.sh` (or cd into `mirrorwitch-magisckal-fonts`
+   and zip everything)
  - Zip file can be installed via Magisk
 
 ## Installation via command-line / ADB
