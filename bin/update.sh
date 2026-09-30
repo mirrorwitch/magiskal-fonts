@@ -20,10 +20,11 @@ if ls *|grep '\.zip$'; then
     done
 fi
 
-if ls *|grep -q -F '[wdth,wght].'; then
-    for dirtyname in *wdth,wght*.tt[fc]; do
-        cleanname="$(echo "$dirtyname" | sed -e "s/.wdth,wght.//")";
-        cp -v "$dirtyname" "$cleanname"
+# remove any name component like "[foo,bar]", used in variable fonts by google
+if ls -d *|grep -q '\[.*\]'; then
+    for dirtyname in *\[*\]*; do
+        cleanname="$(echo "$dirtyname" | sed -e "s/\[[^]]*\]//")"
+        cp -f -u -v "$dirtyname" "$cleanname"
     done
 fi
 if ls *|grep -q '\.tt[fc]$'; then
