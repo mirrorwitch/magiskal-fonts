@@ -27,7 +27,7 @@ if ls -d *|grep -q '\[.*\]'; then
         cp -f -u -v "$dirtyname" "$cleanname"
     done
 fi
-if ls *|grep -q '\.tt[fc]$'; then
-  cp -f -u -v *.tt[fc] "$fontsdir"
-fi
+for filename in $(ls *.*|grep -vF '[' | grep '\.tt[fc]$'); do
+  cp -f -u -v "$filename" "$fontsdir/"
+done
 chmod 0644 "$fontsdir"/*
