@@ -13,5 +13,6 @@ adb push "$zipfile" "/sdcard/$zipfile"
 adb root
 adb shell magisk --install-module "/sdcard/$zipfile"
 adb shell rm "/sdcard/$zipfile"
+rm "$zipfile"
 echo "Now do:"
 echo "adb reboot"
