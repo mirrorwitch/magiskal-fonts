@@ -1,6 +1,6 @@
 id=custom_noto_fonts
-name=Updated Noto Fonts, CJK, emoji+Monochrome emoji
-version=2026.09.29-18:15
-versionCode=202609291815
+name=Mirrorwitch's Magiskal Fonts
+version=2026.09.30-13:00
+versionCode=202609301300
 author=mirrorwitch
-description=Systemlessly updates Noto Emoji and Noto Sans for full Unicode support.
+description=Monochrome emoji; new theme fonts (Bitter, Shantell); updated Noto/Emoji/CJK fonts

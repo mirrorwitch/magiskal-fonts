@@ -13,6 +13,7 @@ Features:
    weights configured.
  - Updated releases of Noto Sans, Noto Serif, Noto CJK, Noto Color Emoji.
  - Supports CJK up to Unicode 13, emoji up to Unicode 18.
+ - New style fonts available for theming: Bitter (slab serif), Shantell (comic)
 
 Bugs:
  - I cannot figure out a functional way to fallback to Noto Color Emoji when

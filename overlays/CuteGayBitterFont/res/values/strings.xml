@@ -1,0 +1,4 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Headline / Body font Bitter overlay -->
+    <string name="font_bitter_overlay" translatable="false">Bitter</string>
+</resources>

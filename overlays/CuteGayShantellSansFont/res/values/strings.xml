@@ -1,0 +1,4 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Headline / Body font Shantell overlay -->
+    <string name="font_shantell-sans_overlay" translatable="false">Shantell Sans</string>
+</resources>
