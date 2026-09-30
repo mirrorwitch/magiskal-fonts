@@ -14,7 +14,12 @@ while read line; do
   wget -c "$line"
   sleep 1
 done < "$basedir/$urllist"
-unzip -o NotoSansCJK.ttc.zip
+if ls *|grep '\.zip$'; then
+    for zipfile in *.zip; do
+        unzip -o "$zipfile" && rm "$zipfile"
+    done
+fi
+
 if ls *|grep -q -F '[wdth,wght].'; then
     for dirtyname in *wdth,wght*.tt[fc]; do
         cleanname="$(echo "$dirtyname" | sed -e "s/.wdth,wght.//")";
