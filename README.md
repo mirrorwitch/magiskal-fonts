@@ -13,7 +13,8 @@ Features:
    weights configured.
  - Updated releases of Noto Sans, Noto Serif, Noto CJK, Noto Color Emoji.
  - Supports CJK up to Unicode 13, emoji up to Unicode 18.
- - New style fonts available for theming: Bitter (slab serif), Shantell (comic)
+ - New style fonts available for theming: Bitter (slab serif),
+   Shantell (comic).
 
 Bugs:
  - I cannot figure out a functional way to fallback to Noto Color Emoji when
@@ -21,11 +22,10 @@ Bugs:
 
 
 ## Build
- - Run `update.sh` to get latest version of fonts
+ - Run `update.sh` to get latest version of fonts in the proper places
  - Get manually downloaded fonts (see below) and put them with the others on
    `mirrorwitch-magisckal-fonts/system/fonts`
- - Run `make-zip.sh` (or cd into `mirrorwitch-magisckal-fonts`
-   and zip everything)
+ - Run `make-zip.sh` 
  - Zip file can be installed via Magisk
 
 ## Installation via command-line / ADB
@@ -37,6 +37,10 @@ adb shell magisk --install-module /sdcard/mirrorwitchs-magiskal-fonts.zip
 adb shell rm /sdcard/mirrorwitchs-magiskal-fonts.zip
 adb reboot
 ```
+
+## Build theme font APKs
+ - Set up keystore and Android SDK ≥ 30
+ - Use the makefile in overlays/
 
 ## Manually downloaded fonts
 
