@@ -7,26 +7,20 @@ This updates the fonts in my Galaxy Tab S3 running LineageOS 18.1 (Android 11).
 combination.** This project is probably not useful for anyone else except maybe
 as a basis you can modify to make your own.
 
-Fonts:
- - Noto Emoji monochrome as the emoji font
- - Updated releases of Noto Sans, Noto Serif, Noto CJK, Noto Color Emoji
- - Noto Serif CJK, Noto Sans CJK changed to variable megafont (Super OTC) with
-   different weights, replacing Noto Sans CJK Regular
+Features:
+ - Noto Emoji monochrome as the prefereed emoji font.
+ - Noto Sans CJK, Noto Serif CJK changed for variable font with 7 different
+   weights configured.
+ - Updated releases of Noto Sans, Noto Serif, Noto CJK, Noto Color Emoji.
 
 Bugs:
  - I cannot figure out a functional way to fallback to Noto Color Emoji when
    Noto Emoji lacks a glyph
 
-fonts.xml is based on the default provided by LineageOS 18.1 for this device,
-with the following differences:
-
- - Use Noto Sans CJK, Noto Serif CJK variable font with 7 different weights
-   configured
- - Prefer monochrome emoji to colour
 
 ## Build
  - Run `update.sh` to get latest version of fonts
- - Get manually downloaded fonts (see below) and put them on 
+ - Get manually downloaded fonts (see below) and put them with the others on
    `mirrorwitch-magisckal-fonts/system/fonts`
  - Run `make-zip.sh` (or cd into `mirrorwitch-magisckal-fonts`
    and zip everything)
