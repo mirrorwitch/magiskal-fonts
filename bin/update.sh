@@ -13,8 +13,8 @@ while read line; do
   # github seems to block wget less than curl?
   wget -c "$line"
   if file -i * | grep -q ':.*text/html'; then
-      echo "ERROR: github seems to have blocked download of: $line"
-      echo "Download manually, or try again later..."
+      echo "ERROR: Got HTML page for: $line"
+      echo "Blocked by host, or direct download URL incorrect."
       rm -v $(file -i *|grep ':.*text/html'|cut -d : -f 1)
       exit 1
   fi
