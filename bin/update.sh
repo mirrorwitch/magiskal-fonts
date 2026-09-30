@@ -6,8 +6,10 @@ cachedir="$basedir/cache"
 module=mirrorwitchs-magiskal-fonts
 moduledir="$basedir/$module"
 fontsdir="$moduledir/system/fonts"
+themefonts="Bitter.ttf Bitter-Italic.ttf ShantellSans.ttf"
+themefonts_dir="$moduledir/system/product/fonts"
 
-mkdir -p "$cachedir" "$fontsdir"
+mkdir -p "$cachedir" "$fontsdir" "$themefonts_dir"
 cd "$cachedir"
 while read line; do
   # github seems to block wget less than curl?
@@ -34,6 +36,13 @@ if ls -d *|grep -q '\[.*\]'; then
     done
 fi
 for filename in $(ls *.*|grep -vF '[' | grep '\.tt[fc]$'); do
-  cp -f -u -v "$filename" "$fontsdir/"
+  chmod 0644 "$filename"
+  cp -afuv "$filename" "$fontsdir/"
 done
-chmod 0644 "$fontsdir"/*
+
+# TODO: better way
+for filename in $themefonts; do
+    if [ -f "$filename" ]; then
+        cp -afuv "$filename" "$themefonts_dir/"
+    fi
+done
